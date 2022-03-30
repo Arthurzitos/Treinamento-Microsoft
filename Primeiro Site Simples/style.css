@@ -1,5 +1,20 @@
+/* Setando Variáveis
+---------------------*/
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --green: #00FF00;
+}
+
+/* Formatações Gerais
+----------------------*/
+* {
+    color: var(--fontColor);
+    font-family: Helvetica;
+}
+
 body {
-    font-family: monospace;
+    background: var(--bg);
 }
 
 ul {
@@ -10,24 +25,49 @@ li {
     list-style: circle;
 }
 
+/* Formatando Classes
+----------------------*/
 .list {
     list-style: square;
 }
 
+/* Formatando ID's
+-------------------*/
 #msg {
     font-family: monospace;
 }
 
-:root {
-    --preto: #000000;
-    --branco: #ffffff;
-    --azul: #91c8fc;
+/* Configurando Temas
+----------------------*/
+.light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+
+    --btnBg: (var(--black));
+    --btnFontColor: var(--white);
 }
 
-.lightTheme {
-
-}
-
-.darkTheme {
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
     
+    --btnBg: (var(--white));
+    --btnFontColor: var(--black);
+}
+
+.btn {
+    position: absolute;
+    top: 200px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border:  1px solid #ccc;
+    cursor: pointer;
+    color: var(--btnFontColor);
+    background: var(--btnBg);
+}
+
+.btn:focus {
+    outline: none;
 }
